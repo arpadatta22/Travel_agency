@@ -1,0 +1,496 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url("../image/banner.png");
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+}
+.logo{
+    width: 140px;
+    cursor: pointer;
+}
+.nav-links{
+    margin: 0px;
+}
+.nav-links li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 30px;
+    position: relative;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: #fff;
+}
+.nav-links li::after{
+    color: #fff;
+    content: '';
+    background-color: #fff;
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    transition: 1s;
+} 
+
+.nav-links li:hover::after{
+    width: 100%;
+}
+
+.register-btn{
+    background-color: #fff;
+    color: #000;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.header h1{
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 22%;
+    text-transform: capitalize;
+    font-size: 4vw;
+}
+.search-box{
+    background-color: #fff;
+    width: 80%;
+    margin: 30px auto;
+    padding: 6px 10px 6px 30px;
+    border-radius: 50px;
+}
+.search-box form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.search-box form input{
+    display: block;
+    border: 0px;
+    outline: none;
+    background: transparent;
+    width: 180px;
+}
+.search-box form button{
+    background-color: #ff5861;
+    outline: none;
+    border: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.location-input{
+    flex: 1;
+}
+.search-box form label{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+/*---------------exclusive-------------*/
+.sub-title{
+    margin: 50px 0px 20px;
+    font-size: 2.2vw;
+    font-weight: 500;
+    color: #333;
+}
+.exclusive div img{
+    border-radius: 10px;
+    height: 130px;
+}
+.exclusive div{
+    position: relative;
+}
+.exclusive span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+    z-index: 3;
+    display: none;
+}
+.exclusive .col:hover span{
+    display: block;
+}
+.exclusive .col:hover .layer::after{
+    content: '';
+    background-color: #000;
+    height: 130px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    opacity: .3;
+    border-radius: 10px;
+    
+}
+/*...............Trending Places............*/
+
+.trending img{
+    border-radius: 10px;
+}
+.trending span{
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/*...............CTA............*/
+
+.cta{
+    margin: 80px 0;
+    background-image: linear-gradient(to right,#2f705b,transparent),url(../image/banner-2.png);
+    background-position: center;
+    background-size: cover;
+    padding: 5%;
+    color: #fff;
+}
+.cta h3{
+    font-weight: 500;
+    font-size: 4vw;
+    line-height: 5vw;
+}
+.cta p{
+    font-size: 20px;
+}
+.cta-btn{
+    background-color: #fff;
+    color: #2f705b;
+    padding: 12px 30px;
+    border-radius: 30px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.cta-btn:hover{
+    color: #fff;
+    background-color: #2f705b;
+    transition: 1s;
+}
+
+/*...................travellers-stories................*/
+
+.travellers-stories img{
+    border-radius: 10px;
+}
+
+.travellers-stories{
+    position: relative;
+    
+}
+
+.travellers-stories .col p{
+    position: relative;
+    top: -50%;
+    color: #fff;
+    text-align: center;
+    z-index: 3;
+    
+}
+
+.travellers-stories .col:hover p{
+    margin-bottom: 10px;
+}
+
+.travellers-stories .col{
+    position: relative;
+}
+
+.travellers-stories .col:hover .story-layer::before{
+    content: '';
+    background-color: #000;
+    width: 94%;
+    height: 355px;
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    opacity: .3;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.bb{
+    text-align: center;
+}
+
+/*................footer...............*/
+
+.footer{
+    text-align: center;
+    
+}
+.footer hr{
+    height: 10px;
+    background-color: #000;
+}
+
+.social-icon i{
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 50px;
+}
+
+nav .fa-bars{
+    display: none;
+}
+
+/*...............List page..............*/
+
+.list-nav{
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.5);
+}
+
+.list-nav .nav-links li a{
+color: #000;
+}
+.list-nav .register-btn{
+    background-color: #ff5861;
+    color: #fff;
+}
+.list-nav .nav-links li::after{
+    background-color: #000;
+}
+.list{
+    margin: 50px 0;
+}
+.list .house{
+    margin-bottom: 10px;
+}
+.list .house h3{
+    font-size: 22px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+.list .house span{
+    font-weight: 600;
+    color: #ff5861;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.star i{
+    color: orange;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.box-1{
+    position: relative;
+}
+.price{
+    position: absolute;
+    bottom: 0;
+    right: 55px;
+}
+.price p{
+    margin-bottom: 0px;
+}
+.house img{
+    margin-top: 10%;
+    margin-left: 4%;
+}
+.sidebar{
+    text-align: center;
+}
+.sidebar p{
+    text-align: left;
+    margin-left: 6%;
+    margin-bottom: 0;
+}
+.sidebar span{
+    position: relative;
+    top: -25px;
+    right: -140px;
+}
+.card-house a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/*...............List page..............*/
+
+/*................details page...........*/
+
+.gallery img{
+    border-radius: 10px;
+}
+
+.description p{
+    text-align: justify;
+}
+.description span{
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.description{
+    position: relative;
+}
+.description span:last-child{
+    font-weight: 700;
+    color: #ff5861;
+    position: absolute;
+    right: 1%;
+}
+.details-page .search-box{
+    box-shadow: 0 0 10px #000;
+}
+.details-page .search-box form button{
+    width: 190px;
+    border-radius: 26px;
+    padding: 0px 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    flex: 1;
+}
+.facilities h5{
+    color: #2f705b;
+}
+.facilities p{
+    padding: 0 29px;
+}
+.facilities i{
+    margin-right: 15px;
+}
+.map iframe{
+    width: 100%;
+}
+.booking{
+    position: relative;
+}
+.booking .info{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+.house-content a{
+    color: #ff5861;
+    font-weight: 600;
+}
+
+
+
+
+/*................details page...........*/
+
+/*..............Small device...............*/
+
+@media(max-width:700px){
+    .logo{
+        position: fixed;
+        top: 4%;
+        left: 7%;
+
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        display: inline-block;
+        background-color: #000;
+        z-index: 4;
+        width: 100%;
+        padding: 100px 7% 0;
+        text-align: right;
+        max-height: 100px;
+        overflow: hidden;
+        transition: max-height .5;
+    }
+    nav .nav-links li{
+        display: block;
+        margin: 15px 0 30px;
+    }
+    .register-btn{
+        margin: 15px 0 30px;
+        display: inline-block;
+    }
+    .nav-links li::after{
+        left: 50%;
+        bottom: 50%;
+    }
+    .nav-links li:hover::after{
+        width: 10%;
+    }
+    nav .fa-bars{
+        display: block;
+        position: fixed;
+        top: 4%;
+        color: #fff;
+        right: 7%;
+        font-size: 28px;
+    }
+    .hidemenu{
+        max-height: 400px;
+    }
+    .header h1{
+        padding-top: 100px;
+        font-size: 7vw;
+    }
+    .search-box{
+        width: 90%;
+        margin: 30px auto;
+        padding: 20px 10px 30px;
+        border-radius: 5px;
+        position: relative;
+    }
+    .search-box form{
+        display: block;
+    }
+    .search-box form input{
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        margin: 10px 0 20px;
+        padding-bottom: 15px;
+    }
+    .search-box form button{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,50%);
+    }
+
+    .list-nav .nav-links li a{
+        color:#fff;
+}
+
+.hc{
+    padding: 25px;
+}
+.price{
+    position: absolute;
+    bottom: 0;
+    right: 6%;
+}
+.list{
+    padding-top: 75px;
+}
+.col{
+    flex: 0 0 50%;
+    padding: 5px;
+}
+
+}
+
